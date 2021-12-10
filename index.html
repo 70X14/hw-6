@@ -112,8 +112,8 @@
 										</svg>
 										<input
 											class="modal-ins-reg-ins"
-											type="name"
-											name="name"
+											type="tel"
+											name="phone_number"
 											required
 											minlength="3"
 										/>
@@ -125,8 +125,8 @@
 										</svg>
 										<input
 											class="modal-ins-reg-ins"
-											type="name"
-											name="name"
+											type="email"
+											name="email"
 											required
 											minlength="3"
 										/>
@@ -140,15 +140,23 @@
 											placeholder="Введите текст"
 										></textarea>
 									</label>
-									<div class="accept-line">
-										<label class="modal-accept">
-											<input type="checkbox" name="accept" value="accept" />
-											<p class="text-accept">
+									<div class="checkbox">
+										<input
+											type="checkbox"
+											id="checkbox1"
+											class="checkbox__input"
+											checked
+										/>
+										<label for="checkbox1" class="checkbox__label"
+											><p class="text-accept">
 												Соглашаюсь с рассылкой и принимаю
-											</p>
-										</label>
-										<a href="" class="text-accepta">Условия договора</a>
+												<a href="" class="text-accepta">Условия договора</a>
+											</p></label
+										>
 									</div>
+									<button type="submit" class="reg-btn-submit">
+										Отправить
+									</button>
 								</form>
 							</div>
 						</div>

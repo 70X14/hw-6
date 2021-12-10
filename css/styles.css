@@ -395,7 +395,6 @@ textarea {
 	letter-spacing: 0.03em;
 
 	color: var(--first-text-color);
-	margin-left: 8px;
 }
 
 .text-accepta {
@@ -403,15 +402,92 @@ textarea {
 	text-decoration: underline;
 }
 
-.modal-accept {
+.checkbox {
+	display: inline-block;
+	position: relative;
+	margin: 0 0 10px;
+	font-size: 16px;
+	line-height: 24px;
 	margin-top: 20px;
+}
+.checkbox__input {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 16px;
+	height: 15px;
+	opacity: 0;
+	z-index: 0;
 	display: flex;
-	align-items: baseline;
+	align-content: center;
+}
+.checkbox__label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.checkbox__label:before {
+	content: "";
+
+	top: 4px;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background-color: transparent;
+	border: 2px solid var(--second-title-color);
+	border-radius: 2px;
+	z-index: 1;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: background-color, border-color;
+	display: block;
+	margin-right: 8px;
+}
+.checkbox__label:after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: 6px;
+	height: 12px;
+	border-bottom: 2px solid transparent;
+	border-right: 2px solid transparent;
+	transform: rotate(45deg);
+	z-index: 2;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox__input:checked + .checkbox__label:before {
+	background-color: var(--accent-color);
+	border-color: var(--accent-color);
+}
+.checkbox__input:checked + .checkbox__label:after {
+	border-color: #fff;
 }
 
-.accept-line {
+.reg-btn-submit {
+	width: 200px;
+	height: 50px;
+	font-size: 16px;
+	line-height: 1.87;
 	display: flex;
-	align-items: baseline;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--first-btn-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	border: none;
+	margin: 30px auto 0;
+}
+
+.reg-btn-submit:hover,
+.reg-btn-submit:focus {
+	background-color: var(--background-btn-color);
 }
 
 /*-----------------------FEATURES---------------------------*/
